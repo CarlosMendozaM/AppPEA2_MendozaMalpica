@@ -4,4 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PEA2.Data\PEA2.Data.csproj" />
+    <ProjectReference Include="..\PEA2.Dominio\PEA2.Dominio.csproj" />
+  </ItemGroup>
+
 </Project>

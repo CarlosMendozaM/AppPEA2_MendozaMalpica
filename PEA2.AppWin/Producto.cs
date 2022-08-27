@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace PEA2.AppWin
 {
-    public partial class Form1 : Form
+    public partial class Producto : Form
     {
-        public Form1()
+        public Producto()
         {
             InitializeComponent();
         }
+
+        private void frmProducto_Load(object sender, EventArgs e)
+        {
+            //cargarDatos();
+        }
+
+
     }
 }
