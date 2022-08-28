@@ -36,10 +36,6 @@ namespace PEA2.AppWin
             cboCategoria.DisplayMember = "Nombre";
             cboCategoria.ValueMember = "ID";
         }
-        private void grabarDatos(object sender, EventArgs e)
-        {
-            
-        }
 
         private void asignarObjeto()
         {
@@ -54,12 +50,28 @@ namespace PEA2.AppWin
         {
             txtNombre.Text = this.producto.Nombre;
             txtMarca.Text = this.producto.Marca;
+            //txtPrecio.Text = decimal.Parse(producto.Precio.ToString());
             cboCategoria.SelectedValue = this.producto.IdCategoria;
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
             asignarObjeto();
+            double pMax = double.Parse(txtPrecio.Text);
+            if (pMax > 2500)
+            {
+                MessageBox.Show("El precio sobrepasa los limites", "Sistema",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            int sMin = int.Parse(txtStock.Text);
+            if (sMin < 6)
+            {
+                MessageBox.Show("El stock no es suficiente", "Sistema",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             this.DialogResult = DialogResult.OK;
         }
     }
