@@ -74,7 +74,8 @@ namespace PEA2.Data
             {
                 conexion.Open();
                 var sql = "INSERT INTO [dbo].[Producto] (Nombre, Marca, " +
-                                "IdCategoria, Stock, Precio)" +                          "VALUES(@Nombre, @Marca, @IdCategoria, @Stock, @Precio)";
+                                "IdCategoria, Stock, Precio)" +
+                          "VALUES(@Nombre, @Marca, @IdCategoria, @Stock, @Precio)";
                 using (var comando = new SqlCommand(sql, conexion))
                 {
                     comando.Parameters.AddWithValue("@Nombre", producto.Nombre);
@@ -94,7 +95,8 @@ namespace PEA2.Data
             using (var conexion = new SqlConnection(cadenaconexion))
             {
                 conexion.Open();
-                var sql = "UPDATE Producto SET Nombre = @Nombre, Marca = @Marca, " +                    "IdCategoria = @IdCategoria, Stock = @Stock, Precio = @Precio " +
+                var sql = "UPDATE Producto SET Nombre = @Nombre, Marca = @Marca, " +
+                    "IdCategoria = @IdCategoria, Stock = @Stock, Precio = @Precio " +
                     "WHERE IdProducto = @ID";
                 using (var comando = new SqlCommand(sql, conexion))
                 {
