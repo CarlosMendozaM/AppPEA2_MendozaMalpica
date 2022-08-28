@@ -16,7 +16,7 @@ namespace PEA2.AppWin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Producto());
+            Application.Run(new frmProducto());
         }
     }
 }
