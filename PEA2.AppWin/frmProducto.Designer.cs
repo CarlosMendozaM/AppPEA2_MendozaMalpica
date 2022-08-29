@@ -60,7 +60,7 @@
             this.dgvListado.Name = "dgvListado";
             this.dgvListado.ReadOnly = true;
             this.dgvListado.RowHeadersVisible = false;
-            this.dgvListado.Size = new System.Drawing.Size(458, 329);
+            this.dgvListado.Size = new System.Drawing.Size(304, 329);
             this.dgvListado.TabIndex = 0;
             // 
             // toolStrip1
@@ -71,7 +71,7 @@
             this.tsbEliminar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(482, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(326, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -126,6 +126,7 @@
             this.Column4.HeaderText = "Categoria";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            this.Column4.Visible = false;
             this.Column4.Width = 150;
             // 
             // Column5
@@ -145,7 +146,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 382);
+            this.ClientSize = new System.Drawing.Size(326, 382);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dgvListado);
             this.Name = "frmProducto";

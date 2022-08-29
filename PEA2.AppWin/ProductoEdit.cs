@@ -62,7 +62,6 @@ namespace PEA2.AppWin
             {
                 MessageBox.Show("El precio sobrepasa los limites", "Sistema",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
             }
 
             int sMin = int.Parse(txtStock.Text);
@@ -70,7 +69,6 @@ namespace PEA2.AppWin
             {
                 MessageBox.Show("El stock no es suficiente", "Sistema",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
             }
             this.DialogResult = DialogResult.OK;
         }

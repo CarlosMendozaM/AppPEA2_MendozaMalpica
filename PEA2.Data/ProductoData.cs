@@ -127,5 +127,24 @@ namespace PEA2.Data
             }
             return filasEliminadas > 0;
         }
+
+        //public bool Parametros(Producto producto)
+        //{
+        //    double pMax = 2500;
+        //    {
+        //        if (pMax > 2500)
+        //        {
+        //            MessageBox.Show("El precio sobrepasa los limites", "Sistema",
+        //                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //        }
+
+        //        int sMin = 6;
+        //        if (sMin < 6)
+        //        {
+        //            MessageBox.Show("El stock no es suficiente", "Sistema",
+        //                MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        //        }
+        //    }
+        //}
     }
 }
