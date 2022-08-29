@@ -41,8 +41,8 @@ namespace PEA2.AppWin
         {
             this.producto.Nombre = txtNombre.Text;
             this.producto.Marca = txtMarca.Text;
-            this.producto.Precio = decimal.Parse(txtPrecio.Text);
-            this.producto.Stock = int.Parse(txtStock.Text);
+            this.producto.Precio = decimal.Parse(txtPrecio.ToString());
+            this.producto.Stock = int.Parse(txtStock.ToString());
             this.producto.IdCategoria = int.Parse(cboCategoria.SelectedValue.ToString());
         }
 
@@ -50,7 +50,8 @@ namespace PEA2.AppWin
         {
             txtNombre.Text = this.producto.Nombre;
             txtMarca.Text = this.producto.Marca;
-            //txtPrecio.Text = decimal.Parse(producto.Precio.ToString());
+            //txtPrecio.Text = this.producto.Precio;
+            //txtStock.Text = this.producto.Stock;
             cboCategoria.SelectedValue = this.producto.IdCategoria;
         }
 
@@ -62,6 +63,7 @@ namespace PEA2.AppWin
             {
                 MessageBox.Show("El precio sobrepasa los limites", "Sistema",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
 
             int sMin = int.Parse(txtStock.Text);
@@ -69,6 +71,7 @@ namespace PEA2.AppWin
             {
                 MessageBox.Show("El stock no es suficiente", "Sistema",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
             }
             this.DialogResult = DialogResult.OK;
         }

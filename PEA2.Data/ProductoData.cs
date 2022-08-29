@@ -78,12 +78,12 @@ namespace PEA2.Data
                           "VALUES(@Nombre, @Marca, @IdCategoria, @Stock, @Precio)";
                 using (var comando = new SqlCommand(sql, conexion))
                 {
-                    comando.Parameters.AddWithValue("@Nombre", producto.Nombre);
-                    comando.Parameters.AddWithValue("@Marca", producto.Marca);
-                    comando.Parameters.AddWithValue("@IdCategoria", producto.IdCategoria);
-                    comando.Parameters.AddWithValue("@Precio", producto.Precio);
-                    comando.Parameters.AddWithValue("@Stock", producto.Stock);
-                    filasInsertadas = comando.ExecuteNonQuery();
+                                comando.Parameters.AddWithValue("@Nombre", producto.Nombre);
+                                comando.Parameters.AddWithValue("@Marca", producto.Marca);
+                                comando.Parameters.AddWithValue("@IdCategoria", producto.IdCategoria);
+                                comando.Parameters.AddWithValue("@Precio", producto.Precio);
+                                comando.Parameters.AddWithValue("@Stock", producto.Stock);
+                                filasInsertadas = comando.ExecuteNonQuery();
                 }
             }
             return filasInsertadas > 0;
@@ -100,13 +100,14 @@ namespace PEA2.Data
                     "WHERE IdProducto = @ID";
                 using (var comando = new SqlCommand(sql, conexion))
                 {
-                    comando.Parameters.AddWithValue("@Nombre", producto.Nombre);
-                    comando.Parameters.AddWithValue("@Marca", producto.Marca);
-                    comando.Parameters.AddWithValue("@IdCategoria", producto.IdCategoria);
-                    comando.Parameters.AddWithValue("@Precio", producto.Precio);
-                    comando.Parameters.AddWithValue("@Stock", producto.Stock);
-                    comando.Parameters.AddWithValue("@ID", producto.ID);
-                    filasActualizadas = comando.ExecuteNonQuery();
+                  
+                                comando.Parameters.AddWithValue("@Nombre", producto.Nombre);
+                                comando.Parameters.AddWithValue("@Marca", producto.Marca);
+                                comando.Parameters.AddWithValue("@IdCategoria", producto.IdCategoria);
+                                comando.Parameters.AddWithValue("@Precio", producto.Precio);
+                                comando.Parameters.AddWithValue("@Stock", producto.Stock);
+                                comando.Parameters.AddWithValue("@ID", producto.ID);
+                                filasActualizadas = comando.ExecuteNonQuery();
                 }
             }
             return filasActualizadas > 0;
@@ -127,24 +128,5 @@ namespace PEA2.Data
             }
             return filasEliminadas > 0;
         }
-
-        //public bool Parametros(Producto producto)
-        //{
-        //    double pMax = 2500;
-        //    {
-        //        if (pMax > 2500)
-        //        {
-        //            MessageBox.Show("El precio sobrepasa los limites", "Sistema",
-        //                MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        }
-
-        //        int sMin = 6;
-        //        if (sMin < 6)
-        //        {
-        //            MessageBox.Show("El stock no es suficiente", "Sistema",
-        //                MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //        }
-        //    }
-        //}
     }
 }

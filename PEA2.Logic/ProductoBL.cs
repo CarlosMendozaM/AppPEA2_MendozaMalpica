@@ -19,11 +19,6 @@ namespace PEA2.Logic
             return productoData.BuscarPorId(id);
         }
 
-        //public static bool Parametros(Producto producto)
-        //{
-        //    //var productoData = new ProductoData();
-        //    //return productoData.Parametros(producto);
-        //}
 
             public static bool Insertar(Producto producto)
         {
