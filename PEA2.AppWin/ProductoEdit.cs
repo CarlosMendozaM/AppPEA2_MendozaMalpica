@@ -41,8 +41,8 @@ namespace PEA2.AppWin
         {
             this.producto.Nombre = txtNombre.Text;
             this.producto.Marca = txtMarca.Text;
-            this.producto.Precio = decimal.Parse(txtPrecio.ToString());
-            this.producto.Stock = int.Parse(txtStock.ToString());
+            this.producto.Precio = decimal.Parse(txtPrecio.Text);
+            this.producto.Stock = int.Parse(txtStock.Text);
             this.producto.IdCategoria = int.Parse(cboCategoria.SelectedValue.ToString());
         }
 
