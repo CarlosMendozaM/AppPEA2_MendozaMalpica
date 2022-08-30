@@ -50,8 +50,8 @@ namespace PEA2.AppWin
         {
             txtNombre.Text = this.producto.Nombre;
             txtMarca.Text = this.producto.Marca;
-            //txtPrecio.Text = this.producto.Precio;
-            //txtStock.Text = this.producto.Stock;
+            txtPrecio.Text = this.producto.Precio.ToString();
+            txtStock.Text = this.producto.Stock.ToString();
             cboCategoria.SelectedValue = this.producto.IdCategoria;
         }
 
